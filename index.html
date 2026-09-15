@@ -10,21 +10,269 @@
 
     <meta
         name="description"
-        content="Guilherme Pereira - Software Developer and IT Support professional based in Brisbane, Australia."
+        content="Guilherme Pereira — Software Developer and IT Support professional based in Brisbane, Australia."
     >
 
-    <title>Guilherme Pereira | Portfolio</title>
+    <meta name="author" content="Guilherme de Almeida Pereira">
 
+    <title>Guilherme Pereira | Software Developer & IT Professional</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo" aria-label="Go to homepage">
+                GP<span>.</span>
+            </a>
+
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+
     <main>
-        <h1>Guilherme de Almeida Pereira</h1>
-        <p>Portfolio under construction.</p>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero" id="home">
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="container hero-container">
+
+                <!-- LEFT SIDE -->
+                <div class="hero-content">
+
+                    <div class="hero-eyebrow">
+                        <span class="status-dot"></span>
+                        Software Development · IT Support · Systems & Automation
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span>GUILHERME</span>
+                        <span class="gradient-text">PEREIRA</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Software developer and IT professional focused on
+                        building reliable solutions, solving real-world
+                        technical problems and continuously evolving across
+                        software, systems and automation.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#projects" class="btn btn-primary">
+                            View Projects
+                            <span>↓</span>
+                        </a>
+
+                        <a
+                            href="#about" class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary"
+                        >
+                             About Me
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-socials">
+
+                        <a
+                            href="https://www.linkedin.com/in/guilhermedealmeidapereira"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn ↗
+                        </a>
+
+                        <a
+                            href="https://github.com/GuilhermeDeAlmeidaPereira"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="hero-visual">
+
+                    <div class="visual-orbit orbit-one"></div>
+                    <div class="visual-orbit orbit-two"></div>
+
+                    <div class="code-card">
+
+                        <div class="code-card-header">
+
+                            <div class="window-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="code-file">
+                                profile.js
+                            </span>
+
+                        </div>
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="code-purple">const</span>
+                                <span class="code-blue"> developer</span>
+                                =
+                                <span class="code-yellow">{</span>
+                            </p>
+
+                            <p class="code-indent">
+                                name:
+                                <span class="code-green">
+                                    "Guilherme Pereira"
+                                </span>,
+                            </p>
+
+                            <p class="code-indent">
+                                location:
+                                <span class="code-green">
+                                    "Brisbane, AU"
+                                </span>,
+                            </p>
+
+                            <p class="code-indent">
+                                focus:
+                                <span class="code-yellow">[</span>
+                            </p>
+
+                            <p class="code-double-indent">
+                                <span class="code-green">
+                                    "Software Development"
+                                </span>,
+                            </p>
+
+                            <p class="code-double-indent">
+                                <span class="code-green">
+                                    "IT Support"
+                                </span>,
+                            </p>
+
+                            <p class="code-double-indent">
+                                <span class="code-green">
+                                    "Systems & Automation"
+                                </span>
+                            </p>
+
+                            <p class="code-indent">
+                                <span class="code-yellow">]</span>,
+                            </p>
+
+                            <p class="code-indent">
+                                mindset:
+                                <span class="code-green">
+                                    "Always learning"
+                                </span>
+                            </p>
+
+                            <p>
+                                <span class="code-yellow">}</span>;
+                            </p>
+
+                            <span class="code-cursor"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TECH STACK PREVIEW -->
+            <div class="container tech-preview">
+
+                <p class="tech-label">
+                    TECHNOLOGIES I WORK WITH
+                </p>
+
+                <div class="tech-list">
+                    <span>Python</span>
+                    <span>Java</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Windows</span>
+                    <span>ServiceNow</span>
+                    <span>Git</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            These sections will be built during
+            the next stages of the portfolio.
+        -->
+
+        <div id="about"></div>
+        <div id="experience"></div>
+        <div id="projects"></div>
+        <div id="skills"></div>
+        <div id="contact"></div>
+
     </main>
 
+
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
