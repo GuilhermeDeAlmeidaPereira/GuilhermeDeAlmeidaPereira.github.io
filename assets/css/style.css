@@ -912,6 +912,235 @@ ul {
     color: var(--text-secondary);
 }
 
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-intro {
+    max-width: 680px;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Ready for additional completed project cards. */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    transition: border-color var(--transition), transform var(--transition);
+}
+
+.project-card:focus-within {
+    border-color: var(--accent-secondary);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .project-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-3px);
+    }
+}
+
+.featured-project {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    overflow: hidden;
+}
+
+.project-content {
+    min-width: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.project-type,
+.pipeline-caption {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent-secondary);
+}
+
+.project-category {
+    margin-top: 0.7rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.project-title {
+    margin-block: 1rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 2.7vw, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.project-description {
+    font-size: 0.95rem;
+}
+
+.project-context {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block: 1.75rem;
+    padding-block: 1.25rem;
+    border-block: 1px solid var(--border);
+}
+
+.project-highlight dt {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-highlight dd {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tech li {
+    max-width: 100%;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--background-secondary);
+    font-size: 0.7rem;
+    overflow-wrap: anywhere;
+    color: var(--text-secondary);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+}
+
+.project-actions a:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 4px;
+}
+
+.project-visual {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-left: 1px solid var(--border);
+    background: var(--background-secondary);
+}
+
+.pipeline-caption {
+    margin-bottom: 1.5rem;
+}
+
+.ml-pipeline {
+    list-style: none;
+    display: grid;
+    gap: 1.35rem;
+}
+
+.pipeline-node {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+/* Empty CSS connectors keep the ordered workflow quiet for screen readers. */
+.pipeline-node:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 1.35rem;
+    border-left: 1px solid var(--accent);
+}
+
+.pipeline-step {
+    flex-shrink: 0;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: var(--accent-secondary);
+}
+
+.pipeline-node-model {
+    border-color: var(--accent);
+}
+
+.pipeline-node-optional {
+    border-style: dashed;
+}
+
+.pipeline-node small {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+.projects-coming-soon {
+    margin-top: 2rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@media (max-width: 950px) {
+    .featured-project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-visual {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .ml-pipeline {
+        width: 100%;
+        max-width: 440px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
+        flex-direction: column;
+    }
+}
+
 /* Content stays visible unless JavaScript enables the observer. */
 .reveal.is-pending {
     opacity: 0;
@@ -960,8 +1189,14 @@ ul {
         scroll-behavior: auto;
     }
 
-    .reveal {
+    .reveal,
+    .project-card,
+    .project-actions .btn {
         transition: none;
+    }
+
+    .project-actions .btn:hover {
+        transform: none;
     }
 
     .reveal.is-pending {

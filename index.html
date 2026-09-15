@@ -559,9 +559,119 @@
         </section>
 
 
-        <!-- Future sections -->
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+        <section class="section projects" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-number">03.</span>
+                    <div>
+                        <p class="section-eyebrow">SELECTED PROJECTS</p>
+                        <h2 id="projects-heading">Projects built to solve real problems.</h2>
+                        <p class="projects-intro">
+                            A selection of projects across software development, automation,
+                            systems and artificial intelligence.
+                        </p>
+                    </div>
+                </div>
 
-        <div id="projects"></div>
+                <div class="reveal">
+                    <article class="project-card featured-project" aria-labelledby="fraud-project-title">
+                        <div class="project-content">
+                            <p class="project-type">Featured project</p>
+                            <p class="project-category">Machine Learning &middot; Automation &middot; Academic Research</p>
+                            <h3 class="project-title" id="fraud-project-title">Intelligent Fraud Detection</h3>
+                            <p class="project-description">
+                                An end-to-end fraud detection project combining Machine Learning and
+                                automation to analyse financial transaction datasets, compare classification
+                                models and generate evaluation outputs and optional completion alerts.
+                            </p>
+                            <p class="project-context">
+                                Developed as part of postgraduate research in Software Architecture,
+                                the project compares model behaviour across Credit Card Fraud and
+                                IEEE-CIS datasets rather than relying on a single benchmark.
+                            </p>
+
+                            <dl class="project-highlights">
+                                <div class="project-highlight">
+                                    <dt>Two datasets</dt>
+                                    <dd>Credit Card Fraud + IEEE-CIS</dd>
+                                </div>
+                                <div class="project-highlight">
+                                    <dt>Model comparison</dt>
+                                    <dd>Random Forest + XGBoost</dd>
+                                </div>
+                                <div class="project-highlight">
+                                    <dt>Automation</dt>
+                                    <dd>Optional Outlook completion alerts</dd>
+                                </div>
+                            </dl>
+
+                            <ul class="project-tech" aria-label="Project technologies">
+                                <li>Python</li>
+                                <li>Scikit-learn</li>
+                                <li>XGBoost</li>
+                                <li>Random Forest</li>
+                                <li>SMOTE</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>RPA / Outlook</li>
+                            </ul>
+
+                            <div class="project-actions">
+                                <a class="btn btn-primary"
+                                    href="https://github.com/GuilhermeDeAlmeidaPereira/fraud-detection-ml-rpa"
+                                    target="_blank" rel="noopener noreferrer">
+                                    View Repository <span aria-hidden="true">&#8599;</span>
+                                </a>
+                                <a class="btn btn-secondary"
+                                    href="https://github.com/GuilhermeDeAlmeidaPereira/fraud-detection-ml-rpa/blob/main/docs/intelligent-automation-fraud-detection-manuscript.pdf"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Research Manuscript <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <figure class="project-visual">
+                            <figcaption class="pipeline-caption">ML workflow</figcaption>
+                            <ol class="ml-pipeline" role="list">
+                                <li class="pipeline-node">
+                                    <span class="pipeline-step" aria-hidden="true">01</span>
+                                    <span>Financial Data</span>
+                                </li>
+                                <li class="pipeline-node">
+                                    <span class="pipeline-step" aria-hidden="true">02</span>
+                                    <span>Preprocessing</span>
+                                </li>
+                                <li class="pipeline-node">
+                                    <span class="pipeline-step" aria-hidden="true">03</span>
+                                    <span>SMOTE</span>
+                                </li>
+                                <li class="pipeline-node pipeline-node-model">
+                                    <span class="pipeline-step" aria-hidden="true">04</span>
+                                    <span>Random Forest / XGBoost</span>
+                                </li>
+                                <li class="pipeline-node">
+                                    <span class="pipeline-step" aria-hidden="true">05</span>
+                                    <span>Evaluation</span>
+                                </li>
+                                <li class="pipeline-node pipeline-node-optional">
+                                    <span class="pipeline-step" aria-hidden="true">06</span>
+                                    <span>Automation Alert<small>Optional &middot; Outlook</small></span>
+                                </li>
+                            </ol>
+                        </figure>
+                    </article>
+                </div>
+
+                <p class="projects-coming-soon">
+                    More projects coming as I continue building across software, systems and automation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Future sections -->
         <div id="skills"></div>
         <div id="contact"></div>
 
