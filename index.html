@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Guilherme Pereira — Software Developer and IT Support professional based in Brisbane, Australia.">
+        content="Guilherme Pereira is a Brisbane-based IT professional with a background in software development, IT support, systems, automation and machine learning.">
 
     <meta name="author" content="Guilherme de Almeida Pereira">
 
-    <title>Guilherme Pereira | Software Developer & IT Professional</title>
+    <title>Guilherme Pereira | Software Development &amp; IT Support | Brisbane</title>
+
+    <link rel="canonical" href="https://guilhermedealmeidapereira.github.io/">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Search and social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Guilherme Pereira | Software Development &amp; IT Support">
+    <meta property="og:description" content="Brisbane-based technology professional working across software development, IT support, systems and automation.">
+    <meta property="og:url" content="https://guilhermedealmeidapereira.github.io/">
+    <meta property="og:site_name" content="Guilherme Pereira">
+    <meta property="og:locale" content="en_AU">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Guilherme Pereira | Software Development &amp; IT Support">
+    <meta name="twitter:description" content="Brisbane-based technology professional working across software development, IT support, systems and automation.">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Guilherme de Almeida Pereira",
+        "url": "https://guilhermedealmeidapereira.github.io/",
+        "description": "Software Developer and IT Professional",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Brisbane",
+            "addressRegion": "Queensland",
+            "addressCountry": "AU"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/guilhermedealmeidapereira",
+            "https://github.com/GuilhermeDeAlmeidaPereira"
+        ]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +61,8 @@
 
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- =========================
          HEADER / NAVIGATION
     ========================== -->
@@ -37,9 +73,9 @@
                 GP<span>.</span>
             </a>
 
-            <nav class="nav" aria-label="Main navigation">
+            <nav class="nav" id="main-nav" aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#home" class="nav-link active" aria-current="location">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -48,7 +84,8 @@
                 </ul>
             </nav>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="main-nav">
                 <span></span>
                 <span></span>
             </button>
@@ -57,15 +94,15 @@
     </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- =========================
              HERO
         ========================== -->
-        <section class="hero" id="home">
+        <section class="hero" id="home" tabindex="-1">
 
-            <div class="hero-glow hero-glow-one"></div>
-            <div class="hero-glow hero-glow-two"></div>
+            <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
 
             <div class="container hero-container">
 
@@ -73,7 +110,7 @@
                 <div class="hero-content">
 
                     <div class="hero-eyebrow">
-                        <span class="status-dot"></span>
+                        <span class="status-dot" aria-hidden="true"></span>
                         Software Development · IT Support · Systems & Automation
                     </div>
 
@@ -93,12 +130,12 @@
 
                         <a href="#projects" class="btn btn-primary">
                             View Projects
-                            <span>↓</span>
+                            <span aria-hidden="true">↓</span>
                         </a>
 
-                        <a href="#about" class="btn btn-secondary">
-                            About Me
-                            <span>↓</span>
+                        <a href="assets/files/Guilherme_Almeida_ICT_CV.pdf" class="btn btn-secondary" download>
+                            Download CV
+                            <span aria-hidden="true">↓</span>
                         </a>
 
                     </div>
@@ -123,14 +160,14 @@
                 <!-- RIGHT SIDE -->
                 <div class="hero-visual">
 
-                    <div class="visual-orbit orbit-one"></div>
-                    <div class="visual-orbit orbit-two"></div>
+                    <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+                    <div class="visual-orbit orbit-two" aria-hidden="true"></div>
 
                     <div class="code-card">
 
                         <div class="code-card-header">
 
-                            <div class="window-buttons">
+                            <div class="window-buttons" aria-hidden="true">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -203,7 +240,7 @@
                                 <span class="code-yellow">}</span>;
                             </p>
 
-                            <span class="code-cursor"></span>
+                            <span class="code-cursor" aria-hidden="true"></span>
 
                         </div>
 
@@ -238,9 +275,9 @@
 
 
         <!-- =========================
-     ABOUT
-========================== -->
-        <section class="section about" id="about" aria-labelledby="about-heading">
+             ABOUT
+        ========================== -->
+        <section class="section about" id="about" tabindex="-1" aria-labelledby="about-heading">
 
             <div class="container">
 
@@ -268,7 +305,7 @@
                             </div>
 
                             <div class="profile-location">
-                                <span class="status-dot"></span>
+                                <span class="status-dot" aria-hidden="true"></span>
 
                                 <div>
                                     <strong>Brisbane, Australia</strong>
@@ -327,7 +364,7 @@
 
                             <div class="highlight-item">
                                 <span class="highlight-label">Current focus</span>
-                                <strong>Systems & Automation</strong>
+                                <strong>Enterprise IT Support</strong>
                             </div>
 
                         </div>
@@ -342,9 +379,9 @@
 
 
         <!-- =========================
-     EXPERIENCE
-========================== -->
-        <section class="section experience" id="experience" aria-labelledby="experience-heading">
+             EXPERIENCE
+        ========================== -->
+        <section class="section experience" id="experience" tabindex="-1" aria-labelledby="experience-heading">
 
             <div class="container">
 
@@ -372,7 +409,7 @@
 
                         <article class="timeline-item">
 
-                            <div class="timeline-marker"></div>
+                            <div class="timeline-marker" aria-hidden="true"></div>
 
                             <div class="timeline-content">
 
@@ -407,7 +444,7 @@
 
                         <article class="timeline-item">
 
-                            <div class="timeline-marker"></div>
+                            <div class="timeline-marker" aria-hidden="true"></div>
 
                             <div class="timeline-content">
 
@@ -454,7 +491,7 @@
 
                         <article class="timeline-item">
 
-                            <div class="timeline-marker education-marker"></div>
+                            <div class="timeline-marker education-marker" aria-hidden="true"></div>
 
                             <div class="timeline-content">
 
@@ -487,7 +524,7 @@
 
                         <article class="timeline-item">
 
-                            <div class="timeline-marker education-marker"></div>
+                            <div class="timeline-marker education-marker" aria-hidden="true"></div>
 
                             <div class="timeline-content">
 
@@ -498,7 +535,7 @@
                                         </h3>
 
                                         <p class="timeline-company">
-                                            Brazil
+                                            FACENS — Brazil
                                         </p>
                                     </div>
 
@@ -520,7 +557,7 @@
 
                         <article class="timeline-item">
 
-                            <div class="timeline-marker education-marker"></div>
+                            <div class="timeline-marker education-marker" aria-hidden="true"></div>
 
                             <div class="timeline-content">
 
@@ -562,7 +599,7 @@
         <!-- =========================
              PROJECTS
         ========================== -->
-        <section class="section projects" id="projects" aria-labelledby="projects-heading">
+        <section class="section projects" id="projects" tabindex="-1" aria-labelledby="projects-heading">
             <div class="container">
                 <div class="section-heading reveal">
                     <span class="section-number">03.</span>
@@ -674,7 +711,7 @@
         <!-- =========================
              SKILLS
         ========================== -->
-        <section class="section skills" id="skills" aria-labelledby="skills-heading">
+        <section class="section skills" id="skills" tabindex="-1" aria-labelledby="skills-heading">
             <div class="container">
                 <div class="section-heading reveal">
                     <span class="section-number">04.</span>
@@ -694,15 +731,19 @@
                             <p class="skill-category">Programming</p>
                             <h3 id="skill-heading-1">Software Development</h3>
                         </header>
-                        <p class="skill-description">Programming foundations across object-oriented development, scripting, automation and application development.</p>
+                        <p class="skill-description">Programming and software engineering foundations spanning object-oriented development, application design, algorithms, testing and maintainable software systems.</p>
                         <ul class="skill-tags">
                             <li class="skill-tag">Python</li>
                             <li class="skill-tag">Java</li>
-                            <li class="skill-tag">JavaScript</li>
-                            <li class="skill-tag">TypeScript</li>
                             <li class="skill-tag">C#</li>
                             <li class="skill-tag">C++</li>
                             <li class="skill-tag">C</li>
+                            <li class="skill-tag">Object-Oriented Programming</li>
+                            <li class="skill-tag">Software Engineering</li>
+                            <li class="skill-tag">Software Architecture</li>
+                            <li class="skill-tag">Data Structures &amp; Algorithms</li>
+                            <li class="skill-tag">Software Testing</li>
+                            <li class="skill-tag">Agile / Scrum</li>
                         </ul>
                     </article>
 
@@ -711,11 +752,12 @@
                             <p class="skill-category">Interfaces</p>
                             <h3 id="skill-heading-2">Frontend</h3>
                         </header>
-                        <p class="skill-description">Responsive interfaces and modern web development using component-based and foundational frontend technologies.</p>
+                        <p class="skill-description">Responsive interfaces and modern web development using foundational and component-based frontend technologies.</p>
                         <ul class="skill-tags">
                             <li class="skill-tag">HTML5</li>
                             <li class="skill-tag">CSS3</li>
                             <li class="skill-tag">JavaScript</li>
+                            <li class="skill-tag">TypeScript</li>
                             <li class="skill-tag">React</li>
                             <li class="skill-tag">Angular</li>
                         </ul>
@@ -744,21 +786,32 @@
                             <p class="skill-category">Professional experience</p>
                             <h3 id="skill-heading-4">IT Support &amp; Systems</h3>
                         </header>
-                        <p class="skill-description">End-user support, troubleshooting, device lifecycle activities and day-to-day enterprise technology operations.</p>
+                        <p class="skill-description">End-user support, troubleshooting, device lifecycle activities, ITSM workflows and day-to-day enterprise technology operations.</p>
                         <ul class="skill-tags">
                             <li class="skill-tag">Windows 10/11</li>
                             <li class="skill-tag">ServiceNow</li>
-                            <li class="skill-tag">Hardware Troubleshooting</li>
-                            <li class="skill-tag">Software Troubleshooting</li>
+                            <li class="skill-tag">Active Directory</li>
+                            <li class="skill-tag">ITSM</li>
+                            <li class="skill-tag">Incident &amp; Request Management</li>
+                            <li class="skill-tag">Hardware &amp; Software Troubleshooting</li>
                             <li class="skill-tag">IMACD</li>
-                            <li class="skill-tag">Microsoft Teams</li>
-                            <li class="skill-tag">Zoom</li>
-                            <li class="skill-tag">Webex</li>
-                            <li class="skill-tag">Printer Support</li>
-                            <li class="skill-tag">Asset Management</li>
                             <li class="skill-tag">Basic Networking</li>
                             <li class="skill-tag">PowerShell</li>
+                            <li class="skill-tag">Asset Management</li>
+                            <li class="skill-tag">Technical Documentation</li>
+                            <li class="skill-tag">Printer Support</li>
+                            <li class="skill-tag">Teams / Zoom / Webex</li>
+                            <li class="skill-tag">Information Security Fundamentals</li>
                         </ul>
+                        <div class="skill-learning">
+                            <h4>Currently learning</h4>
+                            <ul class="skill-tags">
+                                <li class="skill-tag skill-tag-learning">Microsoft Entra ID</li>
+                                <li class="skill-tag skill-tag-learning">Microsoft Intune</li>
+                                <li class="skill-tag skill-tag-learning">Exchange Online</li>
+                                <li class="skill-tag skill-tag-learning">Windows Autopilot</li>
+                            </ul>
+                        </div>
                     </article>
 
                     <article class="skill-card reveal" aria-labelledby="skill-heading-5">
@@ -797,11 +850,19 @@
                     </article>
                 </div>
 
+                <div class="certifications reveal" role="group" aria-labelledby="certifications-heading">
+                    <h3 id="certifications-heading">Certifications</h3>
+                    <ul>
+                        <li>ISO 27001 — Information Security</li>
+                        <li>ISO 20000 — IT Service Management</li>
+                    </ul>
+                </div>
+
                 <div class="current-focus reveal" role="group" aria-labelledby="current-focus-heading">
-                    <h3 class="current-focus-label" id="current-focus-heading">CURRENT FOCUS</h3>
+                    <h3 class="current-focus-label" id="current-focus-heading">PROFESSIONAL DIRECTION</h3>
                     <ul class="focus-grid">
-                        <li class="focus-item">Software Engineering</li>
                         <li class="focus-item">Enterprise IT Support</li>
+                        <li class="focus-item">Software Engineering</li>
                         <li class="focus-item">Systems &amp; Automation</li>
                     </ul>
                 </div>
@@ -811,7 +872,7 @@
         <!-- =========================
              CONTACT
         ========================== -->
-        <section class="section contact" id="contact" aria-labelledby="contact-heading">
+        <section class="section contact" id="contact" tabindex="-1" aria-labelledby="contact-heading">
             <div class="container">
                 <div class="section-heading reveal">
                     <span class="section-number">05.</span>
@@ -840,7 +901,8 @@
                             </ul>
                         </div>
                         <div class="contact-actions">
-                            <a class="btn btn-primary"
+                            <button class="btn btn-primary" id="copy-email" type="button" aria-live="polite">Copy Email</button>
+                            <a class="btn btn-secondary"
                                 href="https://www.linkedin.com/in/guilhermedealmeidapereira"
                                 target="_blank" rel="noopener noreferrer">
                                 Connect on LinkedIn <span aria-hidden="true">&#8599;</span>
@@ -851,6 +913,9 @@
                                 View GitHub <span aria-hidden="true">&#8599;</span>
                             </a>
                         </div>
+                        <p class="contact-email">
+                            <a href="mailto:almeida.gui.pereira@gmail.com">almeida.gui.pereira@gmail.com</a>
+                        </p>
                     </div>
 
                     <aside class="contact-status reveal" aria-labelledby="contact-profile-heading">
@@ -906,7 +971,9 @@
                             <li><a href="#skills">Skills</a></li>
                         </ul>
                     </nav>
-                    <ul class="footer-socials" aria-label="Social profiles">
+                    <ul class="footer-socials" aria-label="Contact links">
+                        <li><a href="assets/files/Guilherme_Almeida_ICT_CV.pdf" download>CV <span aria-hidden="true">↓</span></a></li>
+                        <li><a href="mailto:almeida.gui.pereira@gmail.com">Email</a></li>
                         <li><a href="https://www.linkedin.com/in/guilhermedealmeidapereira"
                             target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a></li>
                         <li><a href="https://github.com/GuilhermeDeAlmeidaPereira"
