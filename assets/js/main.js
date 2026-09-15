@@ -2,6 +2,13 @@ const header = document.getElementById("header");
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelectorAll(".nav-link");
 
+/* Footer year is optional so this script can be reused on other pages. */
+const currentYear = document.getElementById("current-year");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
 
 /* =========================================
    HEADER SCROLL EFFECT

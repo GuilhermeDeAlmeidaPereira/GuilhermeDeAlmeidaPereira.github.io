@@ -916,7 +916,8 @@ ul {
    PROJECTS
 ===================================================== */
 
-.projects-intro {
+.projects-intro,
+.skills-intro {
     max-width: 680px;
     margin-top: 1rem;
     color: var(--text-secondary);
@@ -1030,14 +1031,17 @@ ul {
     color: var(--text-secondary);
 }
 
-.project-actions {
+.project-actions,
+.contact-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1.75rem;
 }
 
-.project-actions a:focus-visible {
+.project-actions a:focus-visible,
+.contact a:focus-visible,
+.footer a:focus-visible {
     outline: 2px solid var(--accent-secondary);
     outline-offset: 4px;
 }
@@ -1141,6 +1145,308 @@ ul {
     }
 }
 
+/* =====================================================
+   SKILLS / CURRENT FOCUS
+===================================================== */
+
+.skills {
+    border-top: 1px solid var(--border);
+    background: var(--background-secondary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    min-width: 0;
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+}
+
+.skill-card-featured {
+    border-top-color: var(--accent-secondary);
+}
+
+.skill-category {
+    margin-bottom: 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.skill-card-featured .skill-category {
+    color: var(--accent-secondary);
+}
+
+.skill-card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.skill-description {
+    margin-block: 1rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    max-width: 100%;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+    color: var(--text-primary);
+    background: var(--background-secondary);
+}
+
+/* Preserve the shared reveal transition; keep hover motion restrained. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .skill-card:hover {
+        border-color: var(--accent);
+    }
+}
+
+.current-focus {
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.current-focus-label {
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    color: var(--text-secondary);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.focus-item {
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1000px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .skills-grid,
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+}
+
+/* =====================================================
+   CONTACT / FOOTER
+===================================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-content,
+.contact-status {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+}
+
+.contact-location {
+    margin-top: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.contact-opportunities {
+    margin-top: 1.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.contact-opportunities p {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-opportunities li + li {
+    margin-top: 0.25rem;
+}
+
+.contact-status {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+}
+
+.contact-status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-panel-label {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.contact-status-header .status-dot {
+    flex-shrink: 0;
+    box-shadow: 0 0 0 5px rgba(34, 211, 238, 0.08);
+}
+
+.contact-status-body {
+    padding: 1.75rem;
+}
+
+.contact-status h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.contact-status-location,
+.contact-details dt {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.contact-details > div {
+    margin-top: 1.5rem;
+}
+
+.contact-details dt {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details dd {
+    font-size: 0.9rem;
+}
+
+.contact-status-value {
+    color: var(--accent-secondary);
+}
+
+.footer {
+    padding-block: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    background: var(--background);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.footer-top,
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer-brand .logo,
+.footer-name {
+    color: var(--text-primary);
+}
+
+.footer-name {
+    margin-bottom: 0.25rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+}
+
+.footer-nav,
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+}
+
+.footer-socials {
+    margin-top: 0.75rem;
+}
+
+.footer a:hover {
+    color: var(--accent-secondary);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
+}
+
+.back-to-top {
+    white-space: nowrap;
+}
+
+@media (max-width: 950px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 /* Content stays visible unless JavaScript enables the observer. */
 .reveal.is-pending {
     opacity: 0;
@@ -1191,11 +1497,13 @@ ul {
 
     .reveal,
     .project-card,
-    .project-actions .btn {
+    .project-actions .btn,
+    .contact-actions .btn {
         transition: none;
     }
 
-    .project-actions .btn:hover {
+    .project-actions .btn:hover,
+    .contact-actions .btn:hover {
         transform: none;
     }
 
