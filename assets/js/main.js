@@ -55,3 +55,36 @@ navLinks.forEach((link) => {
     });
 
 });
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if ("IntersectionObserver" in window && !reducedMotion.matches) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("is-pending");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach((element) => {
+        element.classList.add("is-pending");
+        revealObserver.observe(element);
+    });
+
+    reducedMotion.addEventListener("change", (event) => {
+        if (event.matches) {
+            revealObserver.disconnect();
+            revealElements.forEach((element) => {
+                element.classList.remove("is-pending");
+            });
+        }
+    });
+}
