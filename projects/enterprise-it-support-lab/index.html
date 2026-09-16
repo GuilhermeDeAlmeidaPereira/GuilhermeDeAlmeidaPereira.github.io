@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A hands-on enterprise IT support simulation by Guilherme de Almeida Pereira." />
+    <meta name="theme-color" content="#0b0f13" />
+    <title>Enterprise IT Support Lab | Guilherme de Almeida Pereira</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#lab" aria-label="Enterprise IT Support Lab home">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>
+            <strong>SupportOps</strong>
+            <small>Enterprise Lab</small>
+          </span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#lab" class="nav-link active">Live lab</a>
+          <a href="#overview" class="nav-link">Project overview</a>
+        </nav>
+        <div class="operator">
+          <span class="status-dot"></span>
+          <span><strong>Guilherme Pereira</strong><small>L1 Support Technician</small></span>
+        </div>
+      </header>
+
+      <main>
+        <section id="lab" class="lab-section" aria-labelledby="lab-title">
+          <div class="section-intro">
+            <div>
+              <p class="eyebrow">Hands-on simulation</p>
+              <h1 id="lab-title">Enterprise IT Support Lab</h1>
+              <p>Work the queue, investigate symptoms, document your reasoning, and restore service.</p>
+            </div>
+            <div class="session-summary" aria-label="Session statistics">
+              <div><strong id="open-count">0</strong><span>Open</span></div>
+              <div><strong id="resolved-count">0</strong><span>Resolved</span></div>
+              <div><strong id="sla-count">0</strong><span>SLA risk</span></div>
+              <button id="reset-lab" class="icon-button" title="Reset lab progress" aria-label="Reset lab progress">↻</button>
+            </div>
+          </div>
+
+          <div class="workspace">
+            <aside class="ticket-queue" aria-label="Ticket queue">
+              <div class="queue-header">
+                <div>
+                  <span class="queue-label">My work</span>
+                  <strong>Ticket queue</strong>
+                </div>
+                <span id="queue-total" class="count-pill">0</span>
+              </div>
+              <div class="queue-controls">
+                <label class="search-box">
+                  <span aria-hidden="true">⌕</span>
+                  <input id="ticket-search" type="search" placeholder="Search tickets" aria-label="Search tickets" />
+                </label>
+                <select id="ticket-filter" aria-label="Filter tickets">
+                  <option value="all">All tickets</option>
+                  <option value="open">Open</option>
+                  <option value="resolved">Resolved</option>
+                  <option value="priority">High priority</option>
+                </select>
+              </div>
+              <div id="ticket-list" class="ticket-list"></div>
+            </aside>
+
+            <article id="ticket-workbench" class="ticket-workbench" aria-live="polite"></article>
+          </div>
+        </section>
+
+        <section id="overview" class="overview-section" aria-labelledby="overview-title">
+          <div class="overview-heading">
+            <div>
+              <p class="eyebrow">Portfolio case study</p>
+              <h2 id="overview-title">Built to mirror a real service desk shift.</h2>
+            </div>
+            <p>This interactive project demonstrates structured incident handling—not just a list of tools. Each scenario rewards evidence-based troubleshooting, clear documentation, ownership, and appropriate escalation.</p>
+          </div>
+
+          <div class="capability-grid">
+            <article>
+              <span class="capability-number">01</span>
+              <h3>Technical support</h3>
+              <p>Windows 10/11, identity and access, wired and wireless networking, printers, docks, displays, and meeting-room AV.</p>
+              <div class="tag-row"><span>Break–fix</span><span>Root cause</span><span>Remote support</span></div>
+            </article>
+            <article>
+              <span class="capability-number">02</span>
+              <h3>ITSM discipline</h3>
+              <p>ServiceNow-style triage, impact and urgency, work notes, SLA awareness, escalation paths, closure codes, and user communication.</p>
+              <div class="tag-row"><span>Incidents</span><span>Requests</span><span>Escalation</span></div>
+            </article>
+            <article>
+              <span class="capability-number">03</span>
+              <h3>Endpoint operations</h3>
+              <p>IMACD workflows, asset verification, stock control, user handover, EHS checks, and audit-ready configuration records.</p>
+              <div class="tag-row"><span>IMACD</span><span>Assets</span><span>Documentation</span></div>
+            </article>
+          </div>
+
+          <div class="project-footer">
+            <div>
+              <span class="available-dot"></span>
+              <span>Designed and developed by <strong>Guilherme de Almeida Pereira</strong></span>
+            </div>
+            <span>Brisbane, Australia · 2026</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

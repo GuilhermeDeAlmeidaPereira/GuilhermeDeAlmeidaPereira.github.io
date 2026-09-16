@@ -956,6 +956,10 @@ ul {
     transition: border-color var(--transition), transform var(--transition);
 }
 
+.project-entry + .project-entry {
+    margin-top: 1.5rem;
+}
+
 .project-card:focus-within {
     border-color: var(--accent-secondary);
 }
